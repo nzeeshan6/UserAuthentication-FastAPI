@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UserManagement-FastAPI</title>
+    <link id="favicon" rel="icon" type="image/x-icon" href="public/image/favicon.ico">
+</head>
+<body>
+    <div id= 'choice'>
+        <input type="radio" id ='login' onclick="render()" name='options' checked>
+        <label for="login">Sign- In</label>
+        <input type="radio" id = 'register' onclick="render()" name='options'>
+        <label for="register">Register</label>
+    </div>
+    <div id="registrationForm"  style="display: None" >
+        <form action="/register" method="Post" id="submitRegister">
+            <span id="fname">
+                <input type="text"  id = 'fName' name="FName"placeholder="First Name" required="required">
+            </span> 
+            <span id="lname">
+                <input type="text" id="lName" name="LName" placeholder="Last Name" required="required">
+            </span>
+            <span id="nameError"></span>
+            <div>
+                <span id='email-id'>
+                    <input type="email" id="email" name="EMail" placeholder="E-Mail Address" required="required">
+                </span>
+                <span id="emailError"></span>
+            </div>
+            <div id="passcode">
+                <input type="password" id="newCode" name="Pass" placeholder="Password" required="required">
+            </div>
+            <div id="verifypasscode">
+                <input type="password" id="verifyCode" name="VPass" placeholder="Verify Password" required="required">
+                <span id="pwdError"></span>
+            </div>
+            <input type="submit" value="Register">
+        </form>
+    </div>
+    <div id="loginForm" style="display: block">
+        <form action="/login" method="post" id="submitLogin">
+            <div id="emailAddress">
+                <input type="email" id="userName" name="EMail" placeholder="E- Mail Address" required="required">
+            </div>
+            <div id="pwd">
+                <input type="password" name="Pass" id="passwrd" placeholder="Password" required="required">
+            </div>
+            <input type="submit" value="Sign-In" >
+            <div id="loginError"></div>
+        </form>
+    </div>
+
+    <script src="/public/scripts/index.js"></script>
+
+</body>
+</html>
